@@ -3,14 +3,18 @@ import { useLogin } from '../../hooks/useLogin'
 
 // styles
 import styles from './Login.module.css'
+import { useNavigate } from "react-router";
 
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const { login, error, isPending } = useLogin()
 
+  let navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault()
+
     login(email, password)
   }
 
