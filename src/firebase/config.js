@@ -1,9 +1,7 @@
-// Import the functions you need from the SDKs you need
-import firebase from "firebase/app";
-import 'firebase/firestore';
+import firebase from 'firebase/app'
+import 'firebase/firestore'
 import 'firebase/auth'
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBPCSxD3CARK_pPPZ05EX6KHWrVfMENlCM",
   authDomain: "mymoney-624a4.firebaseapp.com",
@@ -13,11 +11,11 @@ const firebaseConfig = {
   appId: "1:987737930649:web:a11783acad60d4c03ff108"
 };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+// init firebase
+firebase.initializeApp(firebaseConfig)
 
-// init service
-const projectFirestore = firebase.firestore();
+// init services
+const projectFirestore = firebase.firestore()
 const projectAuth = firebase.auth()
 
 export { projectFirestore, projectAuth }
