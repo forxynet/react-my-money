@@ -21,8 +21,18 @@ select with press space
    ✔  Firebase initialization complete!
    
 
-   # deploy rules to firebase
+   # Deploy rules to firebase
 
    1) firebase deploy --only firestore [enter]
 
       ✔  Deploy complete!
+   
+   # Builgind & Deploy
+
+   1) npm run build
+   2) firebase deploy
+   
+   ✔  Deploy complete!
+
+Hosting URL: https://mymoney-624a4.web.app
+
