@@ -20,3 +20,9 @@ select with press space
    
    ✔  Firebase initialization complete!
    
+
+   # deploy rules to firebase
+
+   1) firebase deploy --only firestore [enter]
+
+      ✔  Deploy complete!

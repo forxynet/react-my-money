@@ -13,7 +13,14 @@ service cloud.firestore {
     // all client requests to your Firestore database will be denied until you Update
     // your rules
     match /transactions/{document=**} {
-      allow read, write: if request.time < timestamp.date(2025, 2, 13);
+      //allow read, write;
+      //allow read, create, delete, update;
+
+      // only auth 
+      allow create: if request.auth != null;
+
+      // logged in user uid must match the document creator to read and delete
+      allow read, delete: if request.auth.uid == resource.data.uid; 
     }
   }
 }
